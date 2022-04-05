@@ -6,6 +6,8 @@ block content
 
         if error 
             p.error You did not fill something or some errors found there
+        if success 
+            p.success Note has added! 
             
         form.form(action="/add" method='POST') 
             label Subject 
