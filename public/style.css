@@ -49,8 +49,30 @@ a:hover {
     text-align: center;
     font-size: 3rem;
 }
-.form{
+/*.form{
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+/*create page style*/
+.form{
+    max-width: 70%;
+}
+.input{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    font-size: 1.3rem;
+    font-family: inherit;
+    border: 1px solid #5b5b5b;
+    margin-bottom: 20px;
+}
+.btn{
+    display: inline-block;
+    background: #03f79d;
+    color: blueviolet;
+    font-size: 1.3rem;
+    border: none;
+    padding: 10px 20px;
+
 }
