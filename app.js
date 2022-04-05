@@ -45,6 +45,7 @@ app.post('/add', (req, res) => {
 const notes = ['this is cringe subject', 'this is cringe subject 2']
 
 app.get('/notes', (req, res) => {
+
     fs.readFile('./data/notes.json', (err, data) => {
         if (err) throw err
 
@@ -57,7 +58,16 @@ app.get('/notes', (req, res) => {
 
 app.get('/notes/:id', (req, res) => {
     const id = req.params.id
-    res.render ('detail')
+
+    fs.readFile('./data/notes.json', (err, data) => {
+        if (err) throw err
+
+        const notes = JSON.parse(data)
+
+        const note = notes.filter(note => note.id == id) [0]
+
+        res.render ('detail', { note : note })
+    })
 })
 app.listen(8000, err => {
     if (err) console.log(err)
