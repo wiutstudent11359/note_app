@@ -2,8 +2,11 @@ extends layout.pug
 
 block content
     div.container
-        h1 Add note 
+        h2 Add note 
 
+        if error 
+            p.error You did not fill something or some errors found there
+            
         form.form(action="/add" method='POST') 
             label Subject 
             input.input(type="text" name='subject')
