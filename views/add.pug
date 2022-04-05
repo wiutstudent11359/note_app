@@ -1,0 +1,14 @@
+extends layout.pug 
+
+block content
+    div.container
+        h1 Add note 
+
+        form.form(action="/add" method='POST') 
+            label Subject 
+            input.input(type="text" name='subject')
+
+            label Text 
+            textarea.input(type="text" name='text')
+
+            button.btn Add  
